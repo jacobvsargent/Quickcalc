@@ -257,7 +257,7 @@
                 </p>
             </div>
 
-            <div class="notice">
+            <div class="notice" id="notice" style="display: none;">
                 <strong>⚡ Inventory is limited!</strong><br>
                 Payment plans from <strong>ZERO down</strong> available for 2026.
             </div>
@@ -283,6 +283,7 @@
             document.querySelectorAll('.mode-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.mode === mode);
             });
+            document.getElementById('notice').style.display = mode === '2026' ? 'block' : 'none';
             calculate();
         }
 
